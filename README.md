@@ -13,13 +13,13 @@ Use this repository as a template for creating a repository
 of your project. To use it just tap the `«Use this template»` button and choose
 `«Create a new repository»` option, as you can see on the image below.
 
-![Creating repo from a template step 1](./assets/template-step-1.png)
+![Creating repo from a template step 1](./src/assets/template-step-1.png)
 
 The page for creating a new repository will open on the next step. Fill out
 the Name field and make sure the repository is public, then click
 `«Create repository from template»` button.
 
-![Creating repo from a template step 2](./assets/template-step-2.png)
+![Creating repo from a template step 2](./src/assets/template-step-2.png)
 
 You now have a personal project repository, having a repository-template file
 and folder structure. After that, you can work with it as you would with any
@@ -39,25 +39,22 @@ Set up a remote repository named 'origin' with the command
 4. Go to [http://localhost:5173](http://localhost:5173) in your browser. This
    page will automatically reload after saving changes to the project files.
 5. In vite.config.js change base: "/template-vite-react/" to
+   `base: "/your_repo_name/"`
 
-```json
-base: "/your_repo_name/"
-```
-
-6.  Do not forget to change <title> in index.html
+6. Do not forget to change <title> in index.html
 
 ## Deploy
 
 Go to your GitHub Pages configuration (`Settings` >`Pages`) in the repository settings page and choose the source of deployment as `GitHub Actions`, this will lead you to create a workflow that builds and deploys your project, a sample workflow that installs dependencies and builds using npm is provided:
 
-```json
+```yaml
 # Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
 
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ['main']
+    branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -70,7 +67,7 @@ permissions:
 
 # Allow one concurrent deployment
 concurrency:
-  group: 'pages'
+  group: "pages"
   cancel-in-progress: true
 
 jobs:
@@ -87,7 +84,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'npm'
+          cache: "npm"
       - name: Install dependencies
         run: npm install
       - name: Build
@@ -98,7 +95,7 @@ jobs:
         uses: actions/upload-pages-artifact@v2
         with:
           # Upload dist repository
-          path: './dist'
+          path: "./dist"
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
@@ -118,7 +115,7 @@ ID.
 More detailed information about the status can be viewed by clicking on the
 icon, and in the drop-down window, follow the link `Details`.
 
-![Deployment status](./assets/deploy-status.png)
+![Deployment status](./src/assets/deploy-status.png)
 
 ### Live page
 
@@ -140,10 +137,10 @@ the line are required.
 
 ## How it works
 
-![How it works](./assets/how-it-works.png)
+![How it works](./src/assets/how-it-works.png)
 
 1. After each push to the `main` branch of the GitHub repository, a special
-   script (GitHub Action) is launched from the `.github/workflows/deploy.yml`
+   script (GitHub Action) is launched from the `.github/workflows/workflow.yml`
    file.
 2. All repository files are copied to the server, where the project is
    initialized and linted and built before deployment.
