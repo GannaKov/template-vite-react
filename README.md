@@ -23,12 +23,14 @@ the Name field and make sure the repository is public, then click
 
 You now have a personal project repository, having a repository-template file
 and folder structure. After that, you can work with it as you would with any
-other private repository: clone it on your computer, write code, commit, and
-send it to GitHub.
+other private repository:
 
-Clone the repository using the command `git clone <repository URL>`.
-Set up a remote repository named 'origin' with the command
-`git remote add origin <repository URL>`
+- clone it on your computer using the command `git clone <repository URL>`.
+- set up a remote repository named 'origin' with the command
+  `git remote add origin <repository URL>`
+- write code
+- commit
+- send it to GitHub (first time use `git push -u origin main`)
 
 ## Preparing for coding
 
@@ -45,7 +47,7 @@ Set up a remote repository named 'origin' with the command
 
 ## Deploy
 
-Go to your GitHub Pages configuration (`Settings` >`Pages`) in the repository settings page and choose the source of deployment as `GitHub Actions`, this will lead you to create a workflow that builds and deploys your project, a sample workflow that installs dependencies and builds using npm is provided:
+Go to your GitHub Pages configuration (`Settings` >`Pages`) in the repository settings page and choose the source of deployment as `GitHub Actions`, this will lead you to create a workflow that builds and deploys your project (choose `create your own`), a sample workflow that installs dependencies and builds using npm is provided:
 
 ```yaml
 # Simple workflow for deploying static content to GitHub Pages
@@ -102,6 +104,8 @@ jobs:
 ```
 
 Save it as `workflow.yml`.
+
+Do not forget to `git pull` to fetch the changes into your local repository.
 
 ### Deployment status
 
