@@ -156,4 +156,4 @@ the line are required.
 - [mui](https://mui.com/)
 - [tailwind](https://tailwindcss.com/)
 - [uuid](https://www.npmjs.com/package/uuid)
-- [randomUUID)](https://developer.mozilla.org/en-US/docs/Web/API/Crypto/randomUUID)
+- [randomUUID](https://developer.mozilla.org/en-US/docs/Web/API/Crypto/randomUUID)
