@@ -13,13 +13,13 @@ Use this repository as a template for creating a repository
 of your project. To use it just tap the `«Use this template»` button and choose
 `«Create a new repository»` option, as you can see on the image below.
 
-![Creating repo from a template step 1](./src/assets/template-step-1.png)
+![Creating repo from a template step 1](./src/assets/imagesReadMe/template-step-1.png)
 
 The page for creating a new repository will open on the next step. Fill out
 the Name field and make sure the repository is public, then click
 `«Create repository from template»` button.
 
-![Creating repo from a template step 2](./src/assets/template-step-2.png)
+![Creating repo from a template step 2](./src/assets/imagesReadMe/template-step-2.png)
 
 You now have a personal project repository, having a repository-template file
 and folder structure. After that, you can work with it as you would with any
@@ -119,7 +119,7 @@ ID.
 More detailed information about the status can be viewed by clicking on the
 icon, and in the drop-down window, follow the link `Details`.
 
-![Deployment status](./src/assets/deploy-status.png)
+![Deployment status](./src/assets/imagesReadMe/deploy-status.png)
 
 ### Live page
 
@@ -141,10 +141,19 @@ the line are required.
 
 ## How it works
 
-![How it works](./src/assets/how-it-works.png)
+![How it works](./src/assets/imagesReadMe/how-it-works.png)
 
 1. After each push to the `main` branch of the GitHub repository, a special
    script (GitHub Action) is launched from the `.github/workflows/workflow.yml`
    file.
 2. All repository files are copied to the server, where the project is
    initialized and linted and built before deployment.
+
+### Useful links
+
+- [react-icons](https://react-icons.github.io/react-icons/)
+- [styled-components](https://styled-components.com/)
+- [mui](https://mui.com/)
+- [tailwind](https://tailwindcss.com/)
+- [uuid](https://www.npmjs.com/package/uuid)
+- [randomUUID)](https://developer.mozilla.org/en-US/docs/Web/API/Crypto/randomUUID)
